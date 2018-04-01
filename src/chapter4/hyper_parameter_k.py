@@ -1,16 +1,15 @@
 """
 4-4 分类准确度
 """
-import matplotlib
 import matplotlib.pyplot as plt
 import sklearn.model_selection as sk_model_selection
 from sklearn import datasets
+from sklearn.metrics import accuracy_score
+from sklearn.neighbors import KNeighborsClassifier
 
 import chapter4.core.model_selection as my_model_selection
 from chapter4.core import knn
 from chapter4.core import metrics
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
 
 plt.ion()
 
@@ -23,7 +22,7 @@ print(y.shape)
 some_digit = X[666]
 print(y[666])
 some_digit_image = some_digit.reshape(8, 8)
-plt.imshow(some_digit_image, cmap=matplotlib.cm.binary)
+# plt.imshow(some_digit_image, cmap=matplotlib.cm.binary)
 # plt.show()
 
 # 自定义
