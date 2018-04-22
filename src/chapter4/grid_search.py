@@ -1,11 +1,10 @@
 """
 4-6 网格搜索与 k 近邻算法中更多超参数
 """
-import numpy as np
 from sklearn import datasets
+from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import GridSearchCV
 
 digits = datasets.load_digits()
 X = digits.data
