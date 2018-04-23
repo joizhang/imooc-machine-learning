@@ -1,4 +1,4 @@
-#### kNN - k近邻算法（k-Nearest Neighbors）
+### kNN - k近邻算法（k-Nearest Neighbors）
 - 思想简单
 - 应用数学知识少（近乎为零）
 - 效果好
