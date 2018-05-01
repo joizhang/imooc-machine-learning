@@ -23,3 +23,26 @@
 线性回归，SVM，多项式回归，神经网络，逻辑回归......
 
 最优化原理，如凸优化
+
+#### 最小二乘法
+![最小二乘法](images/最小二乘法.png)
+
+#### 回归算法的评价
+![衡量标准1](images/衡量标准1.png)
+
+![衡量标准2](images/衡量标准2.png)
+
+![衡量标准3](images/衡量标准3.png)
+
+![衡量标准4](images/衡量标准4.png)
+
+#### R Squared
+![R-Squared](images/R-Squared.png)
+
+- 分子表示使用我们的模型预测产生的错误
+- 分母表示使用 y 等于 y 的均值预测产生的错误，Baseline Model
+- 上面式子中的分数部分就是数据拟合过程中错误的比重，用1吉安就相当于是得到数据拟合过程中正确的比重
+
+R 方的结论：
+
+![R-Squared-result](images/R-Squared-result.png)
