@@ -1,4 +1,5 @@
 import numpy as np
+from chapter4.core.metrics import r2_score
 
 
 class SimpleLinearRegression1:
@@ -94,6 +95,16 @@ class SimpleLinearRegression2:
         给定单个带预测数据 x_single，返回 x_single 的预测结果
         """
         return self.a_ * x_single + self.b_
+
+    def score(self, x_test, y_test):
+        """
+        根据测试数据集 x_test 和 y_test 确定当前模型的准确度
+        :param x_test:
+        :param y_test:
+        :return:
+        """
+        y_predict = self.predict(x_test)
+        return r2_score(y_test, y_predict)
 
     def __repr__(self):
         return "SimpleLinearRegression1()"
