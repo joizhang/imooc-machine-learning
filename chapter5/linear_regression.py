@@ -1,3 +1,6 @@
+"""
+5-8 实现多元线性回归
+"""
 from sklearn import datasets
 from chapter4.core.model_selection import train_test_split
 from chapter5.core.linear_regression import LinearRegression

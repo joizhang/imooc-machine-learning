@@ -1,3 +1,6 @@
+"""
+5-5 衡量线性回归法的指标：MSE，RMSE 和 MAE
+"""
 import matplotlib.pyplot as plt
 from sklearn import datasets
 

@@ -1,3 +1,6 @@
+"""
+5-9 使用scikit-learn解决回归问题
+"""
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression

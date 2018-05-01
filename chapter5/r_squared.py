@@ -1,3 +1,6 @@
+"""
+5-6 最好的衡量线性回归法的指标：R Squared
+"""
 from sklearn import datasets
 
 from chapter4.core.metrics import r2_score

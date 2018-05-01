@@ -1,3 +1,6 @@
+"""
+5-3 简单线性回归的实现
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 from chapter5.core.simple_linear_regression import SimpleLinearRegression1

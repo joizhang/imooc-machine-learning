@@ -1,3 +1,7 @@
+"""
+4-1 k近邻算法基础
+4-2 scikit-learn中的机器学习算法封装
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 
