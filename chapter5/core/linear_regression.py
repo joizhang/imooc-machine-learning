@@ -26,7 +26,7 @@ class LinearRegression:
 
     def fit_gd(self, X_train, y_train, eta=0.01, n_iters=1e4):
         """
-        根据训练数据集 X_train, y_train，使用梯度下降训练Linear Regression 模型
+        根据训练数据集 X_train, y_train，使用梯度下降训练 Linear Regression 模型
         :param X_train:
         :param y_train:
         :param eta:
@@ -42,11 +42,12 @@ class LinearRegression:
                 return float('inf')
 
         def dJ(theta, X_b_arg, y):
-            res = np.empty(len(theta))
-            res[0] = np.sum(X_b_arg.dot(theta) - y)
-            for i in range(1, len(theta)):
-                res[i] = (X_b_arg.dot(theta) - y).dot(X_b_arg[:, i])
-            return res * 2 / len(X_b_arg)
+            # res = np.empty(len(theta))
+            # res[0] = np.sum(X_b_arg.dot(theta) - y)
+            # for i in range(1, len(theta)):
+            #     res[i] = (X_b_arg.dot(theta) - y).dot(X_b_arg[:, i])
+            # return res * 2 / len(X_b_arg)
+            return X_b_arg.T.dot(X_b_arg.dot(theta) - y) * 2. / len(X_b_arg)
 
         def gradient_descent(X_b_arg, y, initial_theta_arg, eta_arg, n_iters_arg=1e4, epsilon=1e-8):
             theta = initial_theta_arg
@@ -63,6 +64,46 @@ class LinearRegression:
         X_b = np.hstack([np.ones((len(X_train), 1)), X_train])
         initial_theta = np.zeros(X_b.shape[1])
         self._theta = gradient_descent(X_b, y_train, initial_theta, eta, n_iters)
+        self.interception_ = self._theta[0]
+        self.coef_ = self._theta[1:]
+        return self
+
+    def fit_sgd(self, X_train, y_train, n_iters=5, t0=5, t1=50):
+        """
+        根据训练数据集 X_train, y_train，使用随机梯度下降训练 Linear Regression 模型
+        :param X_train:
+        :param y_train:
+        :param n_iters: 几轮
+        :param t0:
+        :param t1:
+        :return:
+        """
+        assert X_train.shape[0] == y_train.shape[0], "the size of X_train must be equal to the size of y_train"
+        assert n_iters >= 1
+
+        def dJ_sgd(theta, X_b_i, y_i):
+            return X_b_i.T.dot(X_b_i.dot(theta) - y_i) * 2.
+
+        def sgd(X_b_arg, y_arg, initial_theta_arg, n_iters_arg, t0_arg=5, t1_arg=50):
+            def learning_rate(t):
+                return t0_arg / (t + t1_arg)
+
+            theta = initial_theta_arg
+            m = len(X_b_arg)
+
+            for cur_iter in range(n_iters_arg):
+                indexes = np.random.permutation(m)
+                X_b_arg_new = X_b_arg[indexes]
+                y_arg_new = y_arg[indexes]
+                for i in range(m):
+                    gradient = dJ_sgd(theta, X_b_arg_new[i], y_arg_new[i])
+                    theta = theta - learning_rate(cur_iter * m + i) * gradient
+
+            return theta
+
+        X_b = np.hstack([np.ones((len(X_train), 1)), X_train])
+        initial_theta = np.random.rand(X_b.shape[1])
+        self._theta = sgd(X_b, y_train, initial_theta, n_iters, t0, t1)
         self.interception_ = self._theta[0]
         self.coef_ = self._theta[1:]
         return self
