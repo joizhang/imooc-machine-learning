@@ -17,12 +17,12 @@ y = y[y < 50.0]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=666)
 
-# scikit-learn 中的线性回归
+# ########## scikit-learn 中的线性回归 ##########
 reg = LinearRegression()
 reg.fit(X_train, y_train)
 print(reg.score(X_test, y_test))
 
-# kNN解决回归问题
+# ########## kNN解决回归问题 ##########
 # kNN Regressor
 knn_reg = KNeighborsRegressor()
 knn_reg.fit(X_train, y_train)

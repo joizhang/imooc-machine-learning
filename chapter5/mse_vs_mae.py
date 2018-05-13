@@ -30,16 +30,16 @@ plt.show()
 
 y_predict = reg.predict(x_test)
 
-# MSE
+# ########## MSE ##########
 mse_test = mean_squared_error(y_test, y_predict)
 print(mse_test)
 
-# RMSE
+# ########## RMSE ##########
 rmse_test = root_mean_squared_error(y_test, y_predict)
 # 平均误差就在下面这个数字万美元左右
 print(rmse_test)
 
-# MAE
+# ########## MAE ##########
 mae_test = mean_absolute_error(y_test, y_predict)
 print(mae_test)
 

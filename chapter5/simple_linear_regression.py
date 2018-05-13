@@ -8,7 +8,7 @@ from chapter5.core.simple_linear_regression import SimpleLinearRegression2
 x = np.array([1., 2., 3., 4., 5.])
 y = np.array([1., 3., 2., 3., 5.])
 
-# 使用我们自己的 SimpleLinearRegression
+# ########## 使用我们自己的 SimpleLinearRegression ##########
 reg1 = SimpleLinearRegression1()
 reg1.fit(x, y)
 x_predict = 6
@@ -19,7 +19,7 @@ plt.plot(x, y_hat1, color='r')
 plt.axis([0, 6, 0, 6])
 plt.show()
 
-# 向量化实现的 SimpleLinearRegression
+# ########## 向量化实现的 SimpleLinearRegression ##########
 reg2 = SimpleLinearRegression2()
 reg2.fit(x, y)
 print(reg2.predict(np.array([x_predict])))
