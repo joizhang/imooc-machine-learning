@@ -4,7 +4,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 最值归一化
+# ########## 最值归一化 ##########
 x = np.random.randint(0, 100, size=100)
 print((x - np.min(x)) / (np.max(x) - np.min(x)))
 
@@ -20,7 +20,7 @@ print(np.std(x[:, 0]))
 print(np.mean(x[:, 1]))
 print(np.std(x[:, 1]))
 
-# 均值方差归一化
+# ########## 均值方差归一化 ##########
 x2 = np.random.randint(0, 100, (50, 2))
 x2 = np.array(x2, dtype=float)
 

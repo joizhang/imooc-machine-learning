@@ -29,12 +29,12 @@ x = np.array([8.09, 3.37])
 x_predict = x.reshape(1, -1)
 plt.scatter(x[0], x[1], color='b')
 
-# 自实现 kNN
+# ########## 自实现 kNN ##########
 knn_clf = knn.KNNClassifier(k=6)
 knn_clf.fit(X_train, y_train)
 print(knn_clf.predict(x_predict))
 
-# 使用 scikit-learn 中的 kNN
+# ########## 使用 scikit-learn 中的 kNN ##########
 kNN_classifier = KNeighborsClassifier(n_neighbors=6)
 kNN_classifier.fit(X_train, y_train)
 print(kNN_classifier.predict(x_predict))

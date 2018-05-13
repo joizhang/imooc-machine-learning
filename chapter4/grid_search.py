@@ -15,7 +15,7 @@ sk_knn_clf = KNeighborsClassifier(n_neighbors=4, weights="uniform")
 sk_knn_clf.fit(X_train, y_train)
 sk_knn_clf.score(X_test, y_test)
 
-# Grid Search
+# ########## Grid Search ##########
 param_grid = [
     {
         'weights': ['uniform'],
