@@ -17,7 +17,7 @@ plt.scatter(x, y)
 plt.plot(x, y_predict, color='r')
 plt.show()
 
-# 线性回归不理想，解决方案，添加一个特征
+# ########## 线性回归不理想，解决方案，添加一个特征 ##########
 X2 = np.hstack([X, X ** 2])
 print(X2.shape)
 lin_reg2 = LinearRegression()

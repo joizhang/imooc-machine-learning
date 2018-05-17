@@ -40,6 +40,9 @@ print(X2)
 
 
 # ########## Pipeline（多项式的特征，数据归一化，线性回归）##########
+x = np.random.uniform(-3, 3, size=100)
+X = x.reshape(-1, 1)
+y = 0.5 * x ** 2 + x + 2 + np.random.normal(0, 1, size=100)
 poly_reg = Pipeline([
     ("poly", PolynomialFeatures(degree=2)),
     ("std_scaler", StandardScaler()),
