@@ -25,7 +25,7 @@
 
 ![主成分分析2](images/主成分分析2.png)
 
-[投影](https://zh.wikipedia.org/wiki/%E6%8A%95%E5%BD%B1)
+[投影-维基百科](https://zh.wikipedia.org/wiki/%E6%8A%95%E5%BD%B1)
 
 ![主成分分析3](images/主成分分析3.png)
 
