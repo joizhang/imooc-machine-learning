@@ -27,3 +27,43 @@ sigmoid 函数值域(0,1)，t > 0 时，p > 0.5，t < 0 时，p < 0.5
 ![损失函数3](images/损失函数3.png)
 
 ![损失函数4](images/损失函数4.png)
+
+前一部分的求导过程
+
+![损失函数5](images/损失函数5.png)
+
+![损失函数6](images/损失函数6.png)
+
+后一部分的求导过程
+
+![损失函数7](images/损失函数7.png)
+
+最终结果
+
+![损失函数8](images/损失函数8.png)
+
+![损失函数9](images/损失函数9.png)
+
+![损失函数10](images/损失函数10.png)
+
+向量化
+
+![损失函数11](images/损失函数11.png)
+
+## 决策边界
+
+![决策边界](images/决策边界.png)
+
+## 逻辑回归中使用正则化
+
+![正则化](images/正则化.png)
+
+## 逻辑回归解决多分类
+
+### OvR(One vs Rest)
+
+![OvR](images/OvR.png)
+
+### OvO()
+
+![OvO](images/OvO.png)
