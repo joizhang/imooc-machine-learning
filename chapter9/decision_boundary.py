@@ -6,8 +6,8 @@ import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
+from chapter9.core.decision_boundary import plot_decision_boundary
 from chapter9.core.logistic_regression import LogisticRegression
-from chapter9.core.logistic_regression import plot_decision_boundary
 
 
 def x2(x1):

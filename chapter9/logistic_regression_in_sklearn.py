@@ -9,7 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.preprocessing import StandardScaler
 
-from chapter9.core.logistic_regression import plot_decision_boundary
+from chapter9.core.decision_boundary import plot_decision_boundary
 
 np.random.seed(666)
 X = np.random.normal(0, 1, size=(200, 2))

@@ -1,11 +1,11 @@
 """
 9-6 在逻辑回归中使用多项式特征
 """
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
+from chapter9.core.decision_boundary import plot_decision_boundary
 from chapter9.core.logistic_regression import LogisticRegression
-from chapter9.core.logistic_regression import plot_decision_boundary
 from chapter9.core.logistic_regression import polynomial_logistic_regression
 
 np.random.seed(666)

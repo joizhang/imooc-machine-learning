@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.multiclass import OneVsRestClassifier
 from sklearn.multiclass import OneVsOneClassifier
+from sklearn.multiclass import OneVsRestClassifier
 
-from chapter9.core.logistic_regression import plot_decision_boundary
+from chapter9.core.decision_boundary import plot_decision_boundary
 
 # 只是用两个特征
 iris = datasets.load_iris()
