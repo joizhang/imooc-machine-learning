@@ -36,7 +36,6 @@ plt.scatter(X[y == 1, 0], X[y == 1, 1])
 plt.scatter(X[y == 2, 0], X[y == 2, 1])
 plt.show()
 
-
 # 使用所有数据
 X = iris.data
 y = iris.target
@@ -51,7 +50,6 @@ print(log_reg.score(X_test, y_test))
 log_reg2 = LogisticRegression(multi_class="multinomial", solver="newton-cg")
 log_reg2.fit(X_train, y_train)
 print(log_reg2.score(X_test, y_test))
-
 
 # sklearn 关于 OvR 和 OvO 的其他支持
 ovr = OneVsRestClassifier(log_reg)

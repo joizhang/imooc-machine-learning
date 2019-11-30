@@ -33,7 +33,7 @@ print(pca.explained_variance_ratio_)
 pca = PCA(n_components=X_train.shape[1])
 pca.fit(X_train)
 plt.plot([i for i in range(X_train.shape[1])],
-         [np.sum(pca.explained_variance_ratio_[:i+1]) for i in range(X_train.shape[1])])
+         [np.sum(pca.explained_variance_ratio_[:i + 1]) for i in range(X_train.shape[1])])
 plt.show()
 
 pca = PCA(0.95)
@@ -44,4 +44,3 @@ X_test_reduction = pca.transform(X_test)
 knn_clf = KNeighborsClassifier()
 knn_clf.fit(X_train_reduction, y_train)
 print(knn_clf.score(X_test_reduction, y_test))
-

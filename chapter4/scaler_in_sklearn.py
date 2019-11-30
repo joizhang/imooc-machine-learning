@@ -12,7 +12,6 @@ y = iris.target
 print(X[:10, :])
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=666)
 
-
 # ########## scikit-learn 中的 StandardScalar ##########
 standardScaler = StandardScaler()
 standardScaler.fit(X_train)

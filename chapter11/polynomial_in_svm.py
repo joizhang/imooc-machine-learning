@@ -4,7 +4,6 @@
 import matplotlib.pyplot as plt
 from sklearn import datasets
 
-
 from chapter11.core.svm import polynomial_svc
 from chapter11.core.svm import polynomial_kernel_svc
 from chapter9.core.decision_boundary import plot_decision_boundary

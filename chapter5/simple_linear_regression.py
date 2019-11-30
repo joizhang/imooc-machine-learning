@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from chapter5.core.simple_linear_regression import SimpleLinearRegression1
 from chapter5.core.simple_linear_regression import SimpleLinearRegression2
+
 x = np.array([1., 2., 3., 4., 5.])
 y = np.array([1., 3., 2., 3., 5.])
 

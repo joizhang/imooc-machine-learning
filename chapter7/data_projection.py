@@ -6,7 +6,6 @@ import numpy as np
 
 from chapter7.core.pca import PCA
 
-
 X1 = np.empty((100, 2))
 X1[:, 0] = np.random.uniform(0., 100., size=100)
 X1[:, 1] = 0.75 * X1[:, 0] + 3. + np.random.normal(0, 10., size=100)

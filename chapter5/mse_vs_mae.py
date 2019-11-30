@@ -44,4 +44,3 @@ mae_test = mean_absolute_error(y_test, y_predict)
 print(mae_test)
 
 # scikit-learn 中的 MSE 和 MAE
-

@@ -28,7 +28,6 @@ plt.show()
 # 分别是[X^0, X, X ** 2]前面的系数
 print(lin_reg2.coef_)
 
-
 # ########## 关于PolynomialFeatures ##########
 X = np.arange(1, 11).reshape(-1, 2)
 print('\n', X.shape)
@@ -37,7 +36,6 @@ poly.fit(X)
 X2 = poly.transform(X)
 print(X2.shape)
 print(X2)
-
 
 # ########## Pipeline（多项式的特征，数据归一化，线性回归）##########
 x = np.random.uniform(-3, 3, size=100)

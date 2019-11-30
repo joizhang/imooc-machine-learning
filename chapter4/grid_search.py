@@ -38,6 +38,3 @@ if __name__ == "__main__":
     print(grid_search.best_score_)
     # 最佳参数
     print(grid_search.best_params_)
-
-
-

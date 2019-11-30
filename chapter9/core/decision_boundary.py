@@ -39,4 +39,3 @@ def plot_svc_decision_boundary(model, axis):
     down_index = (down_y >= axis[2]) & (down_y <= axis[3])
     plt.plot(plot_x[up_index], up_y[up_index], color='black')
     plt.plot(plot_x[down_index], down_y[down_index], color='black')
-

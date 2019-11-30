@@ -25,5 +25,3 @@ print(log_reg.score(X_test, y_test))
 print(log_reg.predict_probability(X_test))
 print(y_test)
 print(log_reg.predict(X_test))
-
-
